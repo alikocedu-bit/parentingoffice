@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eğitimpedia · Parenting Office — Türkiye'nin Parenting Office'i</title>
+<meta name="description" content="Türkiye'nin parenting office'i. Eğitimci Ali Koç tarafından kurulan, ailelere birebir kişiye özel eğitim mentorluğu sunan parenting office. Çocuğa rota değil, pusula veririz.">
+
+<meta property="og:title" content="Türkiye'nin parenting office'i">
+<meta property="og:description" content="Servet için family office. Miras için parenting office. Eğitimci Ali Koç ile birebir mentorluk.">
+<meta property="og:url" content="https://parentingoffice.com">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://parentingoffice.com/#alikoc",
+      "name": "Ali Koç",
+      "alternateName": "Eğitimci Ali Koç",
+      "jobTitle": "Eğitimci",
+      "description": "25 yıllık eğitim camiası deneyimine sahip eğitimci. Eğitimpedia'nın kurucusu, 'Her Çocukla Bir Ebeveyn Doğar' kitabının yazarı. Türkiye'nin parenting office'i konseptinin kurucusu.",
+      "disambiguatingDescription": "Eğitimci Ali Koç, Eğitimpedia'nın ve Türkiye'nin parenting office'inin kurucusudur. Koç Holding Yönetim Kurulu Başkan Vekili Ali Y. Koç ile karıştırılmamalıdır.",
+      "url": "https://parentingoffice.com",
+      "email": "alikoc@egitimpedia.com",
+      "worksFor": { "@id": "https://parentingoffice.com/#organization" },
+      "founder": { "@id": "https://parentingoffice.com/#organization" },
+      "sameAs": [
+        "https://egitimpedia.com",
+        "https://www.linkedin.com/in/egitimcialikoc",
+        "https://kronikkitap.com/yazarlar/ali-koc/"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://parentingoffice.com/#organization",
+      "name": "Eğitimpedia · Parenting Office",
+      "alternateName": "Türkiye'nin Parenting Office'i",
+      "url": "https://parentingoffice.com",
+      "description": "Türkiye'nin parenting office'i. Varlıklı ailelere birebir, mahrem, kişiye özel eğitim mentorluğu sunan aile eğitim ortaklığı. Family office servetin nesil aktarımını korur; parenting office karakterinin.",
+      "founder": { "@id": "https://parentingoffice.com/#alikoc" },
+      "areaServed": { "@type": "Country", "name": "Türkiye" },
+      "sameAs": [
+        "https://egitimpedia.com"
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #0d1929;
+  --bg-2: #111f36;
+  --bg-3: #162035;
+  --cream: #f5f0e6;
+  --cream-dim: #d8d3c8;
+  --gold: #c9a36a;
+  --gold-bright: #e8c478;
+  --gold-dim: rgba(201,163,106,0.18);
+  --muted: #a3a8b8;
+  --dim: #6a7388;
+  --border: rgba(201,163,106,0.12);
+  --border-strong: rgba(201,163,106,0.32);
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection { background: var(--gold); color: var(--bg); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes lineGrow {
+  from { width: 0; opacity: 0; }
+  to { width: 60px; opacity: 1; }
+}
+@keyframes shimmer {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══ NAV ═══ */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 22px 56px;
+  background: rgba(13, 25, 41, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+nav.scrolled {
+  padding: 14px 56px;
+  border-bottom-color: var(--border);
+}
+.nav-logo {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: var(--cream);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav-logo span {
+  color: var(--gold);
+  margin: 0 6px;
+}
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--cream-dim);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.25s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  padding: 11px 22px;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1.5px !important;
+  transition: all 0.3s !important;
+}
+.nav-cta:hover {
+  background: var(--gold);
+  color: var(--bg) !important;
+}
+
+/* ═══ HERO ═══ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 56px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-bg .dot {
+  position: absolute;
+  background: rgba(201,163,106,0.25);
+  border-radius: 50%;
+}
+.hero-bg .villa-row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  opacity: 0.4;
+  background: linear-gradient(180deg, transparent 0%, rgba(22, 32, 53, 0.6) 100%);
+}
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  animation: fadeUp 1s 0.1s both;
+}
+.eyebrow .dot-sep {
+  color: var(--gold);
+  margin: 0 10px;
+}
+h1.hero-title {
+  font-family: var(--serif);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 36px;
+  color: var(--cream);
+  animation: fadeUp 1s 0.25s both;
+  max-width: 14ch;
+}
+h1.hero-title em {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 400;
+}
+.hero-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin-bottom: 36px;
+  animation: lineGrow 1.2s 0.5s both;
+}
+.hero-subtitle {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cream-dim);
+  max-width: 32ch;
+  line-height: 1.4;
+  margin-bottom: 48px;
+  animation: fadeUp 1s 0.6s both;
+}
+.hero-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  animation: fadeUp 1s 0.8s both;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--gold);
+  color: var(--bg);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  display: inline-block;
+  padding: 16px 0;
+  color: var(--cream-dim);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-strong);
+  transition: all 0.3s;
+}
+.btn-ghost:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ═══ SECTION BASE ═══ */
+section.s {
+  padding: 140px 56px;
+  position: relative;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--cream);
+  margin-bottom: 32px;
+  max-width: 18ch;
+}
+.section-title em {
+  font-style: italic;
+  color: var(--gold);
+  font-weight: 400;
+}
+.section-divider {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin-bottom: 40px;
+}
+
+/* ═══ MANIFESTO SECTION ═══ */
+.manifesto {
+  background: var(--bg-2);
+  padding: 160px 56px;
+  text-align: center;
+}
+.manifesto-quote {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--cream);
+  max-width: 22ch;
+  margin: 0 auto 40px;
+  letter-spacing: -0.5px;
+}
+.manifesto-quote em {
+  font-style: normal;
+  color: var(--gold);
+}
+.manifesto-attribution {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ═══ FAMILY OFFICE PARALLEL ═══ */
+.parallel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 80px;
+}
+.parallel-card {
+  padding: 48px 0;
+}
+.parallel-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.parallel-title {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: var(--cream);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.parallel-subtitle {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.parallel-body {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--cream-dim);
+  max-width: 36ch;
+}
+.parallel-divider-vertical {
+  position: relative;
+}
+.parallel-divider-vertical::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: 20%;
+  bottom: 20%;
+  width: 1px;
+  background: var(--border-strong);
+}
+
+/* ═══ APPROACH (3 İLKE) ═══ */
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-top: 64px;
+}
+.approach-card {
+  padding: 48px 36px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.015);
+  transition: all 0.4s;
+}
+.approach-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-6px);
+  background: rgba(201,163,106,0.03);
+}
+.approach-num {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+}
+.approach-title {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+.approach-body {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--cream-dim);
+}
+
+/* ═══ HAKKIMDA ═══ */
+.about {
+  background: var(--bg-2);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+}
+.about-text .section-title { max-width: 12ch; }
+.about-body {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--cream-dim);
+  margin-bottom: 24px;
+}
+.about-body strong {
+  color: var(--cream);
+  font-weight: 500;
+}
+.about-portrait {
+  position: relative;
+  aspect-ratio: 4/5;
+  background: linear-gradient(180deg, #1a2540 0%, #0d1929 100%);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about-portrait::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 60% 30%, rgba(201,163,106,0.08) 0%, transparent 60%);
+}
+.portrait-placeholder {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--dim);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* ═══ STATS (B SEÇENEĞİ) ═══ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border);
+}
+.stat {
+  padding: 0 24px;
+  border-right: 1px solid var(--border);
+}
+.stat:last-child { border-right: none; }
+.stat:first-child { padding-left: 0; }
+.stat-number {
+  font-family: var(--serif);
+  font-size: 38px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* ═══ SERVICES ═══ */
+.services-list {
+  margin-top: 80px;
+}
+.service-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 2fr 220px;
+  gap: 48px;
+  padding: 56px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+  transition: padding 0.3s;
+}
+.service-row:last-child { border-bottom: 1px solid var(--border); }
+.service-row:hover { padding-left: 20px; }
+.service-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 32px;
+  color: var(--gold);
+  font-weight: 400;
+}
+.service-name {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.service-name em {
+  font-style: italic;
+  color: var(--gold);
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 6px;
+  letter-spacing: 0;
+}
+.service-desc {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--cream-dim);
+}
+.service-meta {
+  font-size: 12px;
+  font-style: italic;
+  color: var(--muted);
+  font-family: var(--serif);
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* ═══ EDITORIAL QUOTE ═══ */
+.editorial {
+  background: var(--bg);
+  padding: 180px 56px;
+  text-align: center;
+  position: relative;
+}
+.editorial::before,
+.editorial::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+}
+.editorial::before { top: 80px; }
+.editorial::after { bottom: 80px; }
+.editorial-text {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--cream);
+  max-width: 26ch;
+  margin: 0 auto 32px;
+  letter-spacing: -0.3px;
+}
+.editorial-text em {
+  font-style: italic;
+  color: var(--gold);
+}
+.editorial-attribution {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* ═══ CTA / FORM SECTION ═══ */
+.cta {
+  background: var(--bg-2);
+  padding: 140px 56px 160px;
+}
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: start;
+}
+.cta-left .section-title { max-width: 14ch; }
+.cta-body {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--cream-dim);
+  margin-bottom: 32px;
+  max-width: 38ch;
+}
+.cta-note {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.cta-note-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.cta-note-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--cream-dim);
+  max-width: 36ch;
+}
+
+.form-container {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid var(--border);
+  padding: 48px 40px;
+}
+.form-header {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.form-title {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.form-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* HubSpot form override */
+.hs-form-frame,
+.hbspt-form,
+.hbspt-form form {
+  font-family: var(--sans) !important;
+}
+.hbspt-form label,
+.hbspt-form .hs-form-field > label,
+.hs-form-field label {
+  display: block !important;
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1.5px !important;
+  text-transform: uppercase !important;
+  color: var(--muted) !important;
+  margin-bottom: 8px !important;
+}
+.hbspt-form .hs-form-field,
+.hs-form-field {
+  margin-bottom: 24px !important;
+}
+.hbspt-form input[type="text"],
+.hbspt-form input[type="email"],
+.hbspt-form input[type="tel"],
+.hbspt-form input[type="number"],
+.hbspt-form textarea,
+.hbspt-form select,
+.hs-input {
+  width: 100% !important;
+  padding: 14px 16px !important;
+  background: rgba(13, 25, 41, 0.6) !important;
+  border: 1px solid var(--border-strong) !important;
+  color: var(--cream) !important;
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  border-radius: 0 !important;
+  transition: border-color 0.3s !important;
+}
+.hbspt-form input:focus,
+.hbspt-form textarea:focus,
+.hbspt-form select:focus,
+.hs-input:focus {
+  outline: none !important;
+  border-color: var(--gold) !important;
+}
+.hbspt-form input::placeholder,
+.hbspt-form textarea::placeholder {
+  color: var(--dim) !important;
+}
+.hbspt-form .hs-button,
+.hbspt-form input[type="submit"],
+.hs-button {
+  width: 100% !important;
+  padding: 16px 24px !important;
+  background: var(--gold) !important;
+  color: var(--bg) !important;
+  border: 1px solid var(--gold) !important;
+  font-family: var(--sans) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  border-radius: 0 !important;
+  transition: all 0.3s !important;
+  margin-top: 12px !important;
+}
+.hbspt-form .hs-button:hover {
+  background: var(--gold-bright) !important;
+  border-color: var(--gold-bright) !important;
+}
+.hbspt-form .hs-error-msgs,
+.hbspt-form .hs-error-msg {
+  color: #e8574a !important;
+  font-size: 12px !important;
+  margin-top: 6px !important;
+  list-style: none !important;
+  padding: 0 !important;
+}
+.hbspt-form .hs-richtext,
+.hbspt-form .hs-richtext p {
+  color: var(--cream-dim) !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+}
+.hbspt-form .legal-consent-container,
+.hbspt-form .legal-consent-container p,
+.hbspt-form .legal-consent-container span {
+  color: var(--muted) !important;
+  font-size: 12px !important;
+}
+.hbspt-form .submitted-message {
+  color: var(--gold) !important;
+  font-family: var(--serif) !important;
+  font-size: 22px !important;
+  font-style: italic !important;
+  text-align: center !important;
+  padding: 40px 0 !important;
+}
+.hbspt-form fieldset {
+  max-width: 100% !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.hbspt-form .form-columns-2 .input,
+.hbspt-form .form-columns-1 .input {
+  margin-right: 0 !important;
+}
+
+/* ═══ FOOTER ═══ */
+footer {
+  padding: 80px 56px 48px;
+  border-top: 1px solid var(--border);
+}
+.footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 64px;
+  align-items: start;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-style: italic;
+  color: var(--cream);
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+.footer-tagline {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 38ch;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-end;
+}
+.footer-links a {
+  font-size: 12px;
+  color: var(--cream-dim);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.25s;
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom {
+  max-width: 1280px;
+  margin: 32px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--dim);
+  letter-spacing: 1px;
+}
+.footer-bottom a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.footer-bottom a:hover { color: var(--gold); }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 900px) {
+  nav { padding: 18px 24px; }
+  nav.scrolled { padding: 12px 24px; }
+  .nav-links { gap: 16px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { padding: 100px 24px 60px; }
+  section.s { padding: 80px 24px; }
+  .manifesto, .editorial, .cta { padding: 80px 24px; }
+  .parallel-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .parallel-divider-vertical::after { display: none; }
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .about-portrait {
+    aspect-ratio: 3/4;
+    max-width: 380px;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+  }
+  .stat:last-child { border-bottom: none; }
+  .service-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 0;
+  }
+  .service-meta { text-align: left; }
+  .cta-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .form-container { padding: 32px 24px; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="nav-logo">Eğitimpedia<span>·</span>Parenting Office</a>
+  <div class="nav-links">
+    <a href="#yaklasim">Yaklaşım</a>
+    <a href="#hizmet">Hizmet</a>
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#gorusme" class="nav-cta">Görüşme Talebi</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Eğitimpedia<span class="dot-sep">·</span>Türkiye'nin parenting office'i</div>
+    <h1 class="hero-title">Çocuğa rota değil,<br><em>pusula veririz.</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">Servet için family office. Miras için parenting office.</p>
+    <div class="hero-actions">
+      <a href="#gorusme" class="btn-primary">Görüşme Talebi</a>
+      <a href="#yaklasim" class="btn-ghost">Yaklaşımı Keşfet</a>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="reveal">
+    <p class="manifesto-quote">"Her doğan çocuk,<br>aynı zamanda<br>bir <em>ebeveynin de</em> yeniden doğuşudur."</p>
+    <p class="manifesto-attribution">Eğitimci Ali Koç — Her Çocukla Bir Ebeveyn Doğar</p>
+  </div>
+</section>
+
+<section class="s" id="yaklasim">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Yaklaşım</div>
+      <h2 class="section-title">Family office karakterinin <em>parenting office</em>'idir.</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="parallel-grid">
+      <div class="parallel-card parallel-divider-vertical reveal">
+        <div class="parallel-label">Servet için</div>
+        <h3 class="parallel-title">Family Office</h3>
+        <p class="parallel-subtitle">Birebir. Mahrem. Bütünleşik.</p>
+        <p class="parallel-body">Ailenin servetini nesilden nesile aktarmak üzere kurulmuş, yalnızca o aileye çalışan, çoklu uzmanlığı tek noktada birleştiren bir yapı.</p>
+      </div>
+
+      <div class="parallel-card reveal">
+        <div class="parallel-label">Miras için</div>
+        <h3 class="parallel-title">Parenting Office</h3>
+        <p class="parallel-subtitle">Birebir. Mahrem. Bütünleşik.</p>
+        <p class="parallel-body">Ailenin karakter mirasını nesilden nesile aktarmak üzere kurulmuş, yalnızca o aileye çalışan, eğitim sürecinin tüm boyutlarını tek noktada birleştiren bir yapı.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Üç İlke</div>
+      <h2 class="section-title">Standart paket yok. Çünkü <em>hiçbir aile</em> standart değil.</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="approach-grid">
+      <div class="approach-card reveal">
+        <div class="approach-num">— 01</div>
+        <h3 class="approach-title">Birebir</h3>
+        <p class="approach-body">Her aile için bağımsız tasarım. Standart paket, hazır şablon yok. Çocuğun karakteri, ailenin dinamikleri, beklentiler — hepsi sürecin temelinde.</p>
+      </div>
+      <div class="approach-card reveal">
+        <div class="approach-num">— 02</div>
+        <h3 class="approach-title">Mahrem</h3>
+        <p class="approach-body">İlişki ailenin çekirdek halkasında kalır. Bilgi, görüşme içeriği, kararlar — dış bir aktöre, dış bir kurula yansımaz. Family office sadakatiyle.</p>
+      </div>
+      <div class="approach-card reveal">
+        <div class="approach-num">— 03</div>
+        <h3 class="approach-title">Bütünleşik</h3>
+        <p class="approach-body">Okul, ebeveyn, çocuk üçgeninin tamamına dokunan tek yapı. Parça parça uzmanlardan değil, tek bir yol arkadaşından bütünleşik rehberlik.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about s" id="hakkimda">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-eyebrow">Kurucu</div>
+        <h2 class="section-title">Eğitimci <em>Ali Koç.</em></h2>
+        <div class="section-divider"></div>
+        <p class="about-body">
+          25 yıldır ailelerle çalışan bir eğitimci. <strong>Eğitimpedia'nın</strong> ve Türkiye'nin <strong>parenting office</strong> kategorisinin kurucusu.
+        </p>
+        <p class="about-body">
+          Eğitim camiasında öğretmenlik, okul yöneticiliği ve okul kuruculuğu dahil çok katmanlı saha tecrübesinin ardından, <em>"Çocuğa rota değil, pusula veririz"</em> felsefesiyle Eğitimpedia'yı kurdu. Her bir aileye bireysel yol arkadaşlığı sunan parenting office modelini geliştirdi.
+        </p>
+        <p class="about-body">
+          <strong>"Her Çocukla Bir Ebeveyn Doğar"</strong> kitabının yazarı. Modern ailenin çocuk yetiştirme yolculuğunda karşılaştığı temel soruları ele alır.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-number">1997</div>
+            <div class="stat-label">'den beri eğitim camiasında</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">Birebir</div>
+            <div class="stat-label">Her aile için kişiye özel mentorluk</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">Davet</div>
+            <div class="stat-label">Sınırlı sayıda aile, görüşme önkoşulu</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-portrait reveal">
+        <div class="portrait-placeholder">— Ali Koç portresi<br>buraya gelecek —</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="hizmet">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Hizmet Katmanları</div>
+      <h2 class="section-title">Her aile için <em>bir başlangıç,</em> bir yol, bir eşik.</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="services-list">
+      <div class="service-row reveal">
+        <div class="service-num">01</div>
+        <div>
+          <div class="service-name">Pusula<em>Diagnostik & Yol Haritası</em></div>
+        </div>
+        <div class="service-desc">Ailenin ve çocuğun haritalanması. Akademik, sosyal-duygusal, aile dinamikleri — hepsinin birlikte değerlendirildiği derinlemesine bir başlangıç noktası. Her parenting office ilişkisinin temeli.</div>
+        <div class="service-meta">Tek seferlik<br>4–6 hafta</div>
+      </div>
+
+      <div class="service-row reveal">
+        <div class="service-num">02</div>
+        <div>
+          <div class="service-name">Ebeveyn Mentorluğu<em>Aylık Yol Arkadaşlığı</em></div>
+        </div>
+        <div class="service-desc">Aylık yapılandırılmış aile rehberliği. Çocuğun gelişim eşiklerinde, ebeveynin karar anlarında birebir yanınızda. Sürekli, sessiz, mevcut.</div>
+        <div class="service-meta">12 ay taahhüt<br>Aylık görüşme + erişim</div>
+      </div>
+
+      <div class="service-row reveal">
+        <div class="service-num">03</div>
+        <div>
+          <div class="service-name">Özel Okul Danışmanlığı<em>Doğru Okul, Doğru Zaman</em></div>
+        </div>
+        <div class="service-desc">Anaokulu, ilkokul, ortaokul, lise — geçiş noktalarında doğru okulu, doğru zamanı, doğru geçişi birlikte düşünürüz. Standart liste değil; ailenizin değerleriyle örtüşen, çocuğunuza uygun seçim.</div>
+        <div class="service-meta">Proje bazlı<br>3–6 ay</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="editorial">
+  <div class="reveal">
+    <p class="editorial-text">Çocuğa rota dayatmak yerine <em>içsel pusulasını</em> geliştirmesine alan açmak — bu, varlıklı ailelerin çocuğuna yapabileceği <em>en pahalı hediyenin tam tersidir.</em></p>
+    <p class="editorial-attribution">— Affluenza üzerine, Eğitimci Ali Koç</p>
+  </div>
+</section>
+
+<section class="cta" id="gorusme">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-left reveal">
+        <div class="section-eyebrow">Görüşme Talebi</div>
+        <h2 class="section-title">İlk adım <em>her zaman bir görüşmedir.</em></h2>
+        <div class="section-divider"></div>
+        <p class="cta-body">
+          Parenting office ilişkisi, ön görüşme olmadan başlamaz. Aileniz için uygun olup olmadığımızı, sizin için doğru kapı olup olmadığımızı birlikte konuşalım.
+        </p>
+        <p class="cta-body">
+          Formu doldurduğunuzda, kısa zamanda size dönerek tanışma görüşmesi planlıyoruz. Görüşme ücretsiz ve karşılıklı bağlayıcılığı olmayan bir tanışma anıdır.
+        </p>
+        <div class="cta-note">
+          <div class="cta-note-label">Bir not</div>
+          <p class="cta-note-text">Yılda az sayıda aile kabul ediyoruz. Bu, hizmetin niteliğini koruyabilmek için zorunlu bir kısıttır. Her görüşme bir başlangıç olmayabilir; ama her görüşme bir an'dır.</p>
+        </div>
+      </div>
+
+      <div class="form-container reveal">
+        <div class="form-header">
+          <h3 class="form-title">Tanışma Görüşmesi</h3>
+          <p class="form-subtitle">Aşağıdaki bilgileri paylaşın, kısa zamanda size dönelim.</p>
+        </div>
+        <div id="hubspotForm"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Eğitimpedia · Parenting Office</div>
+      <p class="footer-tagline">Türkiye'nin parenting office'i. Varlıklı ailelere birebir, mahrem, kişiye özel parenting office hizmeti. Çocuğa rota değil, pusula veririz.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://egitimpedia.com">egitimpedia.com</a>
+      <a href="https://www.linkedin.com/in/egitimcialikoc" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://kronikkitap.com/yazarlar/ali-koc/" target="_blank" rel="noopener">Kitap</a>
+      <a href="mailto:alikoc@egitimpedia.com">alikoc@egitimpedia.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Eğitimpedia · Ali Koç · Tüm hakları saklıdır.</div>
+    <div>Düşünce yazıları için → <a href="https://egitimpedia.com">egitimpedia.com</a></div>
+  </div>
+</footer>
+
+<script charset="utf-8" type="text/javascript" src="//js-eu1.hsforms.net/forms/embed/v2.js"></script>
+<script>
+  hbspt.forms.create({
+    portalId: "147074714",
+    formId: "f9782c51-5fc2-48af-8949-338ca07ce4f4",
+    region: "eu1",
+    target: "#hubspotForm"
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
+  reveals.forEach(el => io.observe(el));
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg) {
+    const dots = 24;
+    for (let i = 0; i < dots; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      const size = Math.random() * 2 + 0.6;
+      dot.style.width = size + 'px';
+      dot.style.height = size + 'px';
+      dot.style.left = Math.random() * 100 + '%';
+      dot.style.top = Math.random() * 60 + '%';
+      dot.style.opacity = (Math.random() * 0.4 + 0.2).toString();
+      heroBg.appendChild(dot);
+    }
+  }
+</script>
+
+</body>
+</html>
