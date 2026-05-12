@@ -686,8 +686,8 @@ section.s {
   margin-bottom: 8px;
 }
 .form-subtitle {
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 14px;
+  color: var(--cream-dim);
   line-height: 1.6;
 }
 
@@ -701,12 +701,12 @@ section.s {
 .hbspt-form .hs-form-field > label,
 .hs-form-field label {
   display: block !important;
-  font-size: 11px !important;
+  font-size: 12px !important;
   font-weight: 500 !important;
   letter-spacing: 1.5px !important;
   text-transform: uppercase !important;
-  color: var(--muted) !important;
-  margin-bottom: 8px !important;
+  color: var(--cream) !important;
+  margin-bottom: 10px !important;
 }
 .hbspt-form .hs-form-field,
 .hs-form-field {
@@ -721,14 +721,14 @@ section.s {
 .hs-input {
   width: 100% !important;
   padding: 14px 16px !important;
-  background: rgba(13, 25, 41, 0.6) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
   border: 1px solid var(--border-strong) !important;
   color: var(--cream) !important;
   font-family: var(--sans) !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   font-weight: 400 !important;
   border-radius: 0 !important;
-  transition: border-color 0.3s !important;
+  transition: border-color 0.3s, background 0.3s !important;
 }
 .hbspt-form input:focus,
 .hbspt-form textarea:focus,
@@ -736,10 +736,12 @@ section.s {
 .hs-input:focus {
   outline: none !important;
   border-color: var(--gold) !important;
+  background: rgba(0, 0, 0, 0.45) !important;
 }
 .hbspt-form input::placeholder,
 .hbspt-form textarea::placeholder {
-  color: var(--dim) !important;
+  color: var(--muted) !important;
+  opacity: 0.85 !important;
 }
 .hbspt-form .hs-button,
 .hbspt-form input[type="submit"],
@@ -774,15 +776,30 @@ section.s {
 .hbspt-form .hs-richtext,
 .hbspt-form .hs-richtext p {
   color: var(--cream-dim) !important;
-  font-size: 13px !important;
-  line-height: 1.6 !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
   margin-bottom: 20px !important;
 }
 .hbspt-form .legal-consent-container,
 .hbspt-form .legal-consent-container p,
-.hbspt-form .legal-consent-container span {
-  color: var(--muted) !important;
-  font-size: 12px !important;
+.hbspt-form .legal-consent-container span,
+.hbspt-form .legal-consent-container label {
+  color: var(--cream-dim) !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-weight: 400 !important;
+}
+.hbspt-form .legal-consent-container a {
+  color: var(--gold) !important;
+  text-decoration: underline !important;
+}
+.hbspt-form input[type="checkbox"],
+.hbspt-form input[type="radio"] {
+  width: auto !important;
+  margin-right: 8px !important;
+  accent-color: var(--gold) !important;
 }
 .hbspt-form .submitted-message {
   color: var(--gold) !important;
